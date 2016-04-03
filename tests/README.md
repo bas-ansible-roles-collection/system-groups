@@ -17,11 +17,14 @@ multiple environments.
 
 The *Testing* environment tests a single scenario:
 
-* That a system group can be created
+* Creating a new operating system group with a given GID
+* Removing a pre-existing group
 
 The *Local Testing* environment tests multiple scenarios:
 
-1. ...
+1.
+  * Creating a new operating system group with a given GID
+  * Removing a pre-existing group
 
 **Note:** *Local Testing* environments test scenarios on all operating systems this role supports. Services providing
 *Testing* environments may limit which operating system are available (e.g. SemaphoreCI only supports Ubuntu Trusty).

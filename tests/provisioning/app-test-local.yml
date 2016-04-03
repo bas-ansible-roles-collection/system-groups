@@ -5,6 +5,9 @@
   hosts: project--system-groups:&env--test-local
   remote_user: "{{ privileged_remote_user }}"
   become: yes
+  pre_tasks:
+    - name: ensure group which should be removed during tests exists for test to work
+      group: name='project-y' state='present'
   roles:
     - ../../../system-groups
   tasks:

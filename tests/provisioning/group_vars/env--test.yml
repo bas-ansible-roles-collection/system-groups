@@ -1,2 +1,11 @@
 ---
 # These variables override those defined by roles
+
+# system-groups specific variables
+system_groups_groups:
+  -
+    name: project-x
+    gid: 5000
+  -
+    name: project-y
+    state: absent

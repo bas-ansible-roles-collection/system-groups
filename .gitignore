@@ -1,2 +1,2 @@
 # Provisioning tool directories
-provisioning/site-testing-local/.vagrant
+tests/provisioning/site-testing-local/.vagrant

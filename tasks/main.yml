@@ -1,5 +1,11 @@
 ---
-# ...
+# Manages operating system user groups
+
+- include: groups.yml
+  tags:
+    - BARC_CONFIGURE
+    - BARC_CONFIGURE_USERS
+    - BARC_CONFIGURE_SYSTEM
 
 - include: register-role.yml
   tags:
