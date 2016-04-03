@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Felix Fennell
-  description: £ROLE-ONE-LINE-DESCRIPTION
+  description: Creates one or more operating system user groups with various optional attributes
   company: British Antarctic Survey
 
   issue_tracker_url: https://jira.ceh.ac.uk/browse/BARC

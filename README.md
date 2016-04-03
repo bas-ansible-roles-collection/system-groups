@@ -4,7 +4,7 @@
 Master: [![Build Status](https://semaphoreci.com/api/v1/bas-ansible-roles-collection/system-groups/branches/master/badge.svg)](https://semaphoreci.com/bas-ansible-roles-collection/system-groups)
 Develop: [![Build Status](https://semaphoreci.com/api/v1/bas-ansible-roles-collection/system-groups/branches/develop/badge.svg)](https://semaphoreci.com/bas-ansible-roles-collection/system-groups)
 
-Creates one or more operating system groups
+Creates one or more operating system user groups with various optional attributes.
 
 **Part of the BAS Ansible Role Collection (BARC)**
 
@@ -12,7 +12,8 @@ Creates one or more operating system groups
 
 ## Overview
 
-* ...
+* Creates, or removes, one or more operating system user groups
+* Optionally, sets a number of group attributes such as GID and whether a group is a system group
 
 ## Quality Assurance
 
@@ -64,7 +65,10 @@ More information is available in the
 - name: ...
   hosts: all
   become: yes
-  vars: []
+  vars:
+    system_groups_groups:
+        -
+          name: project-x
   roles:
     - bas-ansible-roles-collection.system-groups
 ```
@@ -92,6 +96,46 @@ More information is available in the
 * Specifies the name of this role within the BAS Ansible Roles Collection (BARC) used for setting local facts
 * See the *BARC roles manifest* section for more information
 * Example: `2.0.0`
+
+#### *system_groups_groups*
+
+A list of operating system user groups, and their properties, to be managed by this role.
+
+* **MAY** be specified
+
+Structured as a list of items, with each item having the following properties:
+
+* *name*
+  * **MUST** be specified
+  * Values **MUST** be valid group names, as determined by the operating system
+  * Example: `project-x`
+* *gid*
+  * **MAY** be specified
+  * Specifies whether the user should have a fixed GID, or if should be allocated by the operating system
+  * Values **MUST** be valid group GIDs, as determined by the operating system
+  * Values **SHOULD** respect operating system conventions for system/non-system groups and reserved or special ranges
+  * Where not specified, the operating system will assign a suitable GID (i.e. the next in the relevant range)
+  * Specifying this property is non-default behaviour
+  * Example: `1001`
+* *system*
+  * **MAY** be specified
+  * Specifies whether a group is considered a 'system' group or a 'user' group
+  * Operating system conventions for system/non-system groups **SHOULD** be respected
+  * Values **MUST** use one of these options, as determined by Ansible:
+    * `yes`
+    * `no`
+  * Specifying this property is non-default behaviour
+  * Example: `yes`
+* *state*
+  * **SHOULD** be specified
+  * Specifies whether the group should be present, or absent
+  * Values **MUST** use one of these options, as determined by Ansible:
+    * `present`
+    * `absent`
+  * Where not specified it will be assumed the group should be present
+  * Example: `present`
+
+Default: `[]` - an empty list
 
 ## Developing
 
