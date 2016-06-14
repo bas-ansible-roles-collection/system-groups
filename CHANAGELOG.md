@@ -20,6 +20,7 @@ Remember: Make sure to update `system_groups_barc_role_version` variable when a 
 ### Changed
 
 * Updated Pristine to BARC flavour version 0.3.1
+* Changing testing dependencies to remove the system-core role as this role is now a member of that role
 
 ### Removed
 
