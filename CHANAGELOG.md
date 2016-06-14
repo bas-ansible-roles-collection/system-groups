@@ -8,6 +8,8 @@ Remember: Make sure to update `system_groups_barc_role_version` variable when a 
 
 ## [Unreleased][unreleased]
 
+## 0.2.0 - 14/06/2016
+
 ### Added
 
 * Ansible 2 support information

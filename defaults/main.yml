@@ -3,7 +3,7 @@
 
 # BARC specific variables
 system_groups_barc_role_name: system_groups
-system_groups_barc_role_version: 0.1.0
+system_groups_barc_role_version: 0.2.0
 
 # system-groups specific variables
 system_groups_groups: []
