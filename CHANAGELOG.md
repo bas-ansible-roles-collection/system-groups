@@ -15,6 +15,7 @@ Remember: Make sure to update `system_groups_barc_role_version` variable when a 
 ### Fixed
 
 * Missing release header and formatting in Change log
+* Ansible 2 deprecations
 
 ### Changed
 
