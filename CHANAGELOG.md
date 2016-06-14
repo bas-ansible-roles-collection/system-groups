@@ -10,4 +10,10 @@ Remember: Make sure to update system_groups_barc_role_version variable when a ne
 
 ### Added
 
+* Ansible 2 support information
+
+### Changed
+
+* Updated Pristine to BARC flavour version 0.3.1
+
 * New role! - initial version based on 0.1.0 of the BARC flavour of the BAS Base Project - Pristine

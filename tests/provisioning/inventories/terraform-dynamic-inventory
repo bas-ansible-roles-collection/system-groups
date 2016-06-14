@@ -35,7 +35,7 @@ def tfstates(root=None):
         for name in filenames:
             if os.path.splitext(name)[-1] == '.tfstate':
 
-                print (os.path.join(dirpath, name))
+                # print (os.path.join(dirpath, name))
                 yield os.path.join(dirpath, name)
 
 

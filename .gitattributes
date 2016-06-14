@@ -6,3 +6,4 @@ tests export-ignore
 
 # GitHub linguist specific customisations (to improve language statistics)
 tests/Vagrantfile linguist-vendored
+tests/provisioning/* linguist-vendored
