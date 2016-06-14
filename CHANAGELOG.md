@@ -19,6 +19,11 @@ Remember: Make sure to update `system_groups_barc_role_version` variable when a 
 ### Changed
 
 * Updated Pristine to BARC flavour version 0.3.1
+
+### Removed
+
+* Debug task in role tests
+
 ## 0.1.0 - 03/04/2016
 
 ### Added

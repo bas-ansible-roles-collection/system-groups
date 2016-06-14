@@ -6,8 +6,6 @@
   register: system_groups_test_fact_system_groups_names
   changed_when: false
 
-- debug: var=system_groups_groups
-
 - name: assert desired group exists
   assert:
     that:
