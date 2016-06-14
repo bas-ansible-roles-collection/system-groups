@@ -6,20 +6,18 @@
   register: system_groups_test_fact_system_groups_names
   changed_when: false
 
-- debug: var=system_groups_groups
-
 - name: assert desired group exists
   assert:
     that:
       - "'{{ item.name }}' in system_groups_test_fact_system_groups_names.stdout"
   when: item.state is not defined or (item.state is defined and item.state == 'present')
-  with_items: system_groups_groups
+  with_items: "{{ system_groups_groups }}"
 - name: assert undesired group does not exist
   assert:
     that:
       - "'{{ item.name }}' not in system_groups_test_fact_system_groups_names.stdout"
   when: item.state is defined and item.state == 'absent'
-  with_items: system_groups_groups
+  with_items: "{{ system_groups_groups }}"
 
 - name: list gids for all operating system groups
   command: "cut -d : -f 1,3 /etc/group"
@@ -30,4 +28,4 @@
     that:
       - "'{{ item.name }}:{{ item.gid }}' in system_groups_test_fact_system_groups_gids.stdout"
   when: item.gid is defined
-  with_items: system_groups_groups
+  with_items: "{{ system_groups_groups }}"

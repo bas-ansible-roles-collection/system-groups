@@ -4,9 +4,29 @@
 All notable changes to this role will be documented in this file.
 This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-Remember: Make sure to update system_groups_barc_role_version variable when a new version is released.
+Remember: Make sure to update `system_groups_barc_role_version` variable when a new version is released.
 
 ## [Unreleased][unreleased]
+
+## 0.2.0 - 14/06/2016
+
+### Added
+
+* Ansible 2 support information
+
+### Fixed
+
+* Missing release header and formatting in Change log
+* Ansible 2 deprecations
+
+### Changed
+
+* Updated Pristine to BARC flavour version 0.3.1
+* Changing testing dependencies to remove the system-core role as this role is now a member of that role
+
+### Removed
+
+* Debug task in role tests
 
 ## 0.1.0 - 03/04/2016
 

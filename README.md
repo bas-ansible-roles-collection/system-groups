@@ -8,7 +8,7 @@ Creates one or more operating system user groups with various optional attribute
 
 **Part of the BAS Ansible Role Collection (BARC)**
 
-**This role uses version 0.1.0 of the BARC flavour of the BAS Base Project - Pristine**.
+**This role uses version 0.3.1 of the BARC flavour of the BAS Base Project - Pristine**.
 
 ## Overview
 
@@ -19,6 +19,16 @@ Creates one or more operating system user groups with various optional attribute
 
 This role uses manual and automated testing to ensure its features work as advertised.
 See [here](tests/README.md) for more information.
+
+## Ansible compatibility
+
+* this role supports Ansible 1.8 or higher in the 1.x series
+* this role supports Ansible 2.x
+
+**Note:** Support for Ansible 1.x is deprecated by this role, future versions will support Ansible 2.x only.
+
+More information on Ansible compatibility is available in the
+[BARC General Documentation](https://antarctica.hackpad.com/BARC-Overview-and-Policies-SzcHzHvitkt#:h=Ansible-compatbility).
 
 ## Dependencies
 
